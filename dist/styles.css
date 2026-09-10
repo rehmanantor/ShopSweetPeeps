@@ -58,3 +58,12 @@ header .utilities{gap:6px}header .icon{height:40px;width:38px}
 .hero p:not(.eyebrow){font-size:15px;max-width:310px}
 .hero .hero-caption{left:7%;right:auto;bottom:18px;font-size:11px}
 }
+
+/* Keep mobile category labels below consistently sized product images. */
+@media(max-width:600px){
+.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;align-items:stretch}
+.category-grid .category{display:flex;flex-direction:column;min-width:0;background:#fffdf9}
+.category-grid .category::after{display:none}
+.category-grid .category img{aspect-ratio:1;object-fit:contain;padding:10px;width:100%;height:auto;flex-shrink:0}
+.category-grid .category span{position:static;display:block;bottom:auto;left:auto;padding:10px 8px 16px;text-align:center;font-size:clamp(20px,5.2vw,28px);line-height:1.2;margin:0}
+}
