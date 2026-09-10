@@ -33,3 +33,28 @@ header .utilities{gap:6px}header .icon{height:40px;width:38px}
 @media(max-width:1100px){.header-inner{gap:16px}header .wordmark{font-size:18px}.hero-copy{padding:42px 8%}.hero h1{font-size:48px}.hero-media{height:480px}}
 @media(max-width:800px){.header-inner{min-height:60px;padding-block:6px;gap:8px}header .wordmark{font-size:18px}header .utilities{gap:0}header .icon{width:34px;height:40px}.hero{grid-template-columns:46% 54%}.hero h1{font-size:40px}.hero-copy{padding:35px 8%}.hero p:not(.eyebrow){font-size:15px}.hero-media{height:470px}.hero-caption{left:16px;right:16px;bottom:16px;font-size:12px;padding:10px 12px}}
 @media(max-width:600px){.announcement{font-size:10px;padding:3px 10px;line-height:17px;min-height:23px}.header-inner{min-height:56px;padding-block:5px}header .wordmark{font-size:16px;letter-spacing:.2em}header .wordmark small{font-size:7px;margin-top:4px}.hero{display:flex;flex-direction:column}.hero-copy{order:1;padding:32px 6% 30px}.hero h1{font-size:42px;line-height:1.05;margin-bottom:18px}.hero .eyebrow{margin-bottom:14px}.hero p:not(.eyebrow){font-size:15px}.hero-media{order:2;height:370px;width:100%}.hero-media .hero-image{object-position:50% 56%}.hero-caption{font-size:12px;bottom:14px;left:16px;right:16px}.product-name,.search-results h3,.cart-row h3{font-size:14px;line-height:1.5}.product-name{height:3em;min-height:3em;margin-top:11px;margin-bottom:6px}.product-card>.price{font-size:13px}.product-card>.price del{font-size:12px}}
+
+/* Full-width photographic hero with integrated copy and shopping links. */
+.hero{position:relative;isolation:isolate;display:grid;grid-template-columns:1fr;min-height:520px;height:clamp(520px,43vw,680px);overflow:hidden;background:#49362d}
+.hero .hero-media{position:absolute;inset:0;z-index:-2;width:100%;height:100%;order:initial}
+.hero .hero-media .hero-image{width:100%;height:100%;object-fit:cover;object-position:50% 57%}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(25,17,13,.78),rgba(25,17,13,.48) 36%,rgba(25,17,13,.08) 70%)}
+.hero .hero-copy{align-self:center;width:min(100%,1440px);margin:auto;padding:56px 6%;color:#fffaf3;pointer-events:none}
+.hero .hero-copy a{pointer-events:auto}
+.hero h1{max-width:590px;font-size:clamp(46px,5.1vw,76px);line-height:1.04;margin-bottom:24px;text-shadow:0 2px 18px #24150e25}
+.hero p:not(.eyebrow){max-width:355px;color:#fff5eb;font-size:16px}
+.hero .eyebrow{color:#fff5eb}
+.hero .button{background:#fff8ef;border-color:#fff8ef;color:#34231c}
+.hero .button:hover{background:#ead8c8;border-color:#ead8c8}
+.hero .text-link{color:#fffaf3;border-color:#e2caba;margin-top:20px}
+.hero .hero-caption{left:auto;right:4%;bottom:24px;background:transparent;color:#fffaf3;padding:8px 0;border-bottom:1px solid #ffffff80;text-shadow:0 1px 8px #000;max-width:300px}
+.hero a:focus-visible{outline-color:#fff}
+@media(max-width:600px){
+.hero{display:grid;min-height:540px;height:calc(82svh - 80px);max-height:660px}
+.hero .hero-copy{padding:36px 7% 78px;align-self:end}
+.hero .hero-media .hero-image{object-position:58% 50%}
+.hero::before{background:linear-gradient(0deg,rgba(25,17,13,.85),rgba(25,17,13,.5) 52%,rgba(25,17,13,.08))}
+.hero h1{font-size:44px;max-width:350px;margin-bottom:18px}
+.hero p:not(.eyebrow){font-size:15px;max-width:310px}
+.hero .hero-caption{left:7%;right:auto;bottom:18px;font-size:11px}
+}
